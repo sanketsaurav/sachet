@@ -1,0 +1,25 @@
+version = 1
+
+test_patterns = [
+  '**/*_test.go',
+  '**/test_*.go',
+]
+
+exclude_patterns = [
+  'examples/**',
+  'vendor/**',
+]
+
+[[ analyzers ]]
+  name = 'go'
+  enabled = true
+
+  [analyzers.meta]
+  import_path = 'github.com/sanketsaurav/sachet'
+  dependencies_vendored = true
+
+
+[[ analyzers ]]
+  name = 'dockerfile'
+  enabled = true
+
